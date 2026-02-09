@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MediLink</string>
+    <string name="title_activity_doctor_side">DoctorSide</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Welcome !</string> <!-- Fixed: Removed quotes -->
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">Login failed</string> <!-- Fixed: Removed quotes -->
+    <string name="title_activity_patient_side">PatientSide</string>
+    <string name="title_activity_calendar">Calendar</string>
+    <string name="title_activity_chat_box">ChatBox</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="patient_side">Patient Side</string>
+    <string name="logout">Logout</string>
+    <string name="doctor_side">Doctor Side</string>
+    <string name="request_appointment">Request appointment</string>
+    <string name="save_appointment">Save appointment</string>
+    <string name="pick_time_till">Pick Time till</string>
+    <string name="pick_time_from">Pick Time from</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="client_phone_no">Client Phone No</string>
+    <string name="client_name">Client Name</string>
+</resources>

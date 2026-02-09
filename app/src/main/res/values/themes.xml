@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MediLink" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/Lavendar</item>
+        <item name="colorPrimaryVariant">@color/Lavendar</item>
+    </style>
+
+    <style name="Theme.MediLink" parent="Base.Theme.MediLink" />
+    
+    <style name="roundedimageview">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+
+    </style>
+
+    <style name="DailogAnimation">
+        <item name="android:windowEnterAnimation"> @anim/slide_in</item>
+        <item name="android:windowExitAnimation"> @anim/slide_out</item>
+    </style>
+</resources>

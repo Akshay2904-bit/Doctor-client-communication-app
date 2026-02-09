@@ -1,0 +1,15 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Home_bottom"
+        android:icon="@drawable/bottom_nav_home"
+        tools:ignore="MenuTitle" />
+    <item
+        android:id="@+id/Calendar_bottom"
+        android:icon="@drawable/bottom_nav_calendar"
+        tools:ignore="MenuTitle"/>
+    <item
+        android:id="@+id/pofile_page"
+        android:icon="@drawable/patient_person_24"
+        tools:ignore="MenuTitle"/>
+</menu>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:context=".Doctorside.DoctorSide">
+
+    <!-- Main Content Layout -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Doctorside.DoctorSide">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/mainpage"
+            tools:context=".Doctorside.DoctorSide">
+
+            <!-- Progress CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Loading"
+                    android:indeterminateTint="@color/lavender"
+                    android:visibility="gone" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="339dp"
+                android:layout_height="465dp"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.68"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clientSearch"
+                app:layout_constraintVertical_bias="0.539" />
+
+            <!-- Search View -->
+            <SearchView
+                android:id="@+id/clientSearch"
+                android:layout_width="338dp"
+                android:layout_height="53dp"
+                android:background="@drawable/card_border"
+                android:closeIcon="@drawable/clear_icon"
+                android:iconifiedByDefault="false"
+                android:queryHint="Enter Client Name"
+                android:searchIcon="@drawable/search_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.276" />
+
+            <!-- ImageView -->
+            <ImageView
+                android:id="@+id/doctor_side_home_page_pfp_image_view"
+                android:layout_width="100dp"
+                android:layout_height="85dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.118"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.128"
+                app:srcCompat="@drawable/ab" />
+
+            <!-- Greeting TextView -->
+            <TextView
+                android:id="@+id/greetingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:fontFamily="@font/architects_daughter"
+                android:padding="5dp"
+                android:text="Greetings"
+                android:textAlignment="textStart"
+                android:textSize="23dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.321"
+                app:layout_constraintStart_toEndOf="@id/doctor_side_home_page_pfp_image_view"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Doctor Name TextView -->
+
+            <!-- Clients Label -->
+            <TextView
+                android:id="@+id/doctor_side_user_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="128dp"
+                android:fontFamily="@font/architects_daughter"
+                android:padding="10dp"
+                android:text="Doctor User Name"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.348"
+                app:layout_constraintStart_toEndOf="@id/doctor_side_home_page_pfp_image_view"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/clientsL"
+                android:layout_width="73dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/architects_daughter"
+                android:text="Clients"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.146"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clientSearch" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Bottom App Bar and Floating Action Button -->
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="123dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:hideOnScroll="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/drawer_toolbar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:elevation="4dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="18dp"
+                app:navigationIcon="@drawable/bottom_nav_settings" />
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:background="@android:color/transparent"
+                android:paddingTop="21dp"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottom_menu" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <!-- Floating Action Button -->
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/addClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/fab_add"
+            app:fab_colorNormal="#F4A4A9"
+            app:layout_anchor="@+id/bottomAppBar"
+            app:layout_anchorGravity="center"
+            app:maxImageSize="60dp" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Drawer Layout (Navigation View) -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="260dp"
+        android:layout_height="420dp"
+        android:id="@+id/drawer_view"
+        android:layout_marginTop="330dp"
+        android:layout_marginEnd="50dp"
+        android:layout_gravity="end"
+        android:background="@drawable/rounded_nav_view_background"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_menu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

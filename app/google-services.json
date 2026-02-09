@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "168442452759",
+    "project_id": "medilink1-87a34",
+    "storage_bucket": "medilink1-87a34.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168442452759:android:08a3c3cac82ade0f0b7552",
+        "android_client_info": {
+          "package_name": "com.example.medilink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3JgYXzQr4bPvGqCGvgbyW6egWUUJHGuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

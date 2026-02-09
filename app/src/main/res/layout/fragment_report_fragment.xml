@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/fragment_report_fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+        <!-- Download Button -->
+
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="169dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="416dp"
+        android:elevation="20dp"
+        android:background="@drawable/prisription_from_doc" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Open_report_form"
+        android:layout_width="249dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="300dp"
+        android:drawableStart="@android:drawable/ic_menu_save"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Make report"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Calendar_event"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="16dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:background="@drawable/hpage">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top">
+        <SearchView
+            android:id="@+id/client_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="160dp"/>
+        <!-- Calendar View -->
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/rounded_background_calendar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="360dp"
+            android:layout_height="350dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.68"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clientSearch"
+            app:layout_constraintVertical_bias="0.539" />
+
+
+    </LinearLayout>
+
+        <!-- Floating Action Button -->
+        <com.github.clans.fab.FloatingActionMenu
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="280dp"
+            android:layout_marginBottom="340dp"
+            app:menu_fab_size="normal"
+            app:fab_colorPressed="#64B4AC"
+            app:menu_colorNormal="#A7EBE5"
+            app:menu_icon="@drawable/bulleted_list_client"
+            app:menu_openDirection="up"
+            app:menu_showShadow="true">
+
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addEvent"
+                android:src="@drawable/baseline_calendar"
+                app:fab_showShadow="true"
+                app:fab_colorNormal="#94D4D7"
+                app:fab_colorPressed="#6AA2A1"
+                app:fab_size="mini"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/set_appointment"
+                android:src="@drawable/appointments"
+                app:fab_showShadow="true"
+                app:fab_colorNormal="#4BC879"
+                app:fab_colorPressed="#3F9752"
+                app:fab_size="mini"/>
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

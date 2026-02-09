@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:background="@drawable/hpage"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="15dp">
+
+
+        <EditText
+            android:id="@+id/Updated_Event_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Name"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:padding="20dp"
+            android:background="@drawable/card_border" />
+
+        <EditText
+            android:id="@+id/Updated_Event_Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Description"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:background="@drawable/card_border"
+            android:height="100dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/Updated_DateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pick Date" />
+
+        <Button
+            android:id="@+id/Updated_Start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pick Time from" />
+
+        <Button
+            android:id="@+id/Updated_Finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pick Time till" />
+
+        <!-- <ImageView
+             android:id="@+id/eventImage"
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+             android:layout_gravity="center"
+             android:layout_marginTop="16dp" /> !-->
+
+        <Button
+            android:id="@+id/save_Updated_EventButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Save Event" />
+
+    </LinearLayout>
+</ScrollView>

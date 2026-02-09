@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+
+        android:layout_margin="20dp"
+        android:id="@+id/main"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mainpage"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".Doctorside.Client_data_display">
+
+        <!-- Client Name Section -->
+        <TextView
+            android:id="@+id/detailName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/architects_daughter"
+            android:maxWidth="250dp"
+            android:text="Client Name"
+            android:padding="10dp"
+            android:background="@color/black"
+            android:elevation="80dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <!-- Client Image Section -->
+        <ImageView
+            android:id="@+id/detailImage"
+            android:layout_width="275dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:maxWidth="350dp"
+            android:outlineProvider="background"
+            android:src="@drawable/uploading" />
+
+        <!-- Age and Gender Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            >
+
+            <TextView
+                android:id="@+id/detailAge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxWidth="170dp"
+                android:padding="14dp"
+                android:text="Age"
+                android:background="@drawable/card_border"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/detailGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_border"
+                android:gravity="center"
+                android:maxWidth="170dp"
+                android:padding="14dp"
+                android:text="Gender"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Disease Section -->
+        <TextView
+            android:id="@+id/detailDisease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/card_border"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:lineSpacingExtra="6sp"
+            android:maxWidth="320dp"
+            android:padding="14dp"
+            android:text="Disease"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!-- Phone Number Section -->
+        <TextView
+            android:id="@+id/detailPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:lineSpacingExtra="6sp"
+            android:maxWidth="320dp"
+            android:background="@drawable/card_border"
+            android:padding="14dp"
+            android:text="Phone No"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:menu_fab_size="normal"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="50dp"
+        app:fab_colorPressed="#4C527A"
+        app:menu_colorNormal="@color/lavender"
+        app:menu_icon="@drawable/bulleted_list_client"
+        app:menu_openDirection="up"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_chat"
+            android:src="@drawable/clients_chat_24"
+            app:fab_showShadow="true"
+            app:fab_colorNormal="#4BC879"
+            app:fab_colorPressed="#3F9752"
+            app:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Edit_button"
+            android:src="@drawable/client_edit"
+            app:fab_showShadow="true"
+            app:fab_colorNormal="#94D4D7"
+            app:fab_colorPressed="#6AA2A1"
+            app:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_button"
+            android:src="@drawable/delete_client"
+            app:fab_showShadow="true"
+            app:fab_colorNormal="@color/Red"
+            app:fab_colorPressed="#973F3F"
+            app:fab_size="mini"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Calendar_button"
+            android:src="@drawable/baseline_calendar"
+            app:fab_showShadow="true"
+            app:fab_colorNormal="#94D4D7"
+            app:fab_colorPressed="#6AA2A1"
+            app:fab_size="mini"/>
+
+
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:background="@drawable/hpage"
+    android:id="@+id/main">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/appointment_client_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pick Client"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+            android:inputType="text"
+            android:padding="20dp"
+            android:background="@drawable/card_border" />
+
+        <EditText
+            android:id="@+id/appointment_client_phone_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/client_phone_no"
+            android:inputType="phone"
+            android:padding="20dp"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:background="@drawable/card_border"
+            android:height="100dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/pickDateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/pick_date" />
+
+        <Button
+            android:id="@+id/pickTimeButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/pick_time_from" />
+
+        <Button
+            android:id="@+id/pickTimeButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/pick_time_till" />
+
+        <!-- <ImageView
+             android:id="@+id/eventImage"
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+             android:layout_gravity="center"
+             android:layout_marginTop="16dp" /> !-->
+
+        <Button
+            android:id="@+id/saveAppointmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/save_appointment" />
+
+    </LinearLayout>
+</ScrollView>

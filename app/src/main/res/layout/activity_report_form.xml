@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Doctorside.Report_fragment"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/white">
+            <LinearLayout
+                android:id="@+id/tlPrescriptionReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@color/white">
+
+                <!-- Prescription Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#F0F0F0"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp">
+
+                    <EditText
+                        android:id="@+id/etDoctorName"
+                        android:inputType="text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Dr. John Doe"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"
+                        android:backgroundTint="@android:color/transparent"/>
+
+                    <Button
+                        android:id="@+id/btnPrescriptionDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Date: dd/mm/yy"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:backgroundTint="@android:color/transparent"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                </LinearLayout>
+
+                <!-- Patient Information -->
+                <TextView
+                    android:id="@+id/tvPatientInfoHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Information"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#F9F9F9"
+                    android:padding="10dp"
+                    android:layout_marginBottom="16dp">
+
+                    <EditText
+                        android:id="@+id/etPatientName"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name: Jane Smith"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@android:color/black"
+                        android:backgroundTint="@android:color/transparent"/>
+
+                    <EditText
+                        android:id="@+id/etPatientAge"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Age: 35"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@android:color/black"
+                        android:backgroundTint="@android:color/transparent"/>
+
+                    <EditText
+                        android:id="@+id/etPatientGender"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gender: Female"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@android:color/black"
+                        android:backgroundTint="@android:color/transparent"/>
+                </LinearLayout>
+
+                <!-- Prescription Details -->
+                <TextView
+                    android:id="@+id/tvPrescriptionDetailsHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prescription Details"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <TableLayout
+                    android:id="@+id/tlPrescriptionDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:background="#F9F9F9"
+                    android:padding="10dp">
+
+                    <TableRow>
+                        <TextView
+                            android:id="@+id/tvMedicationHeader"
+                            android:text="Medication"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:padding="4dp" />
+                        <TextView
+                            android:id="@+id/tvDosageHeader"
+                            android:text="Dosage"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:padding="4dp" />
+                        <TextView
+                            android:id="@+id/tvFrequencyHeader"
+                            android:text="Frequency"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:padding="4dp" />
+                    </TableRow>
+
+                    <!-- Example rows with EditTexts -->
+                    <TableRow>
+                        <EditText
+                            android:id="@+id/etMedication1"
+                            android:inputType="text"
+                            android:hint="Medicine"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etDosage1"
+                            android:inputType="text"
+                            android:hint="Dosage"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etFrequency1"
+                            android:inputType="text"
+                            android:hint="3x daily"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                    </TableRow>
+                    <TableRow>
+                        <EditText
+                            android:id="@+id/etMedication2"
+                            android:inputType="text"
+                            android:hint="Medicine"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etDosage2"
+                            android:inputType="text"
+                            android:hint="Dosage"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etFrequency2"
+                            android:inputType="text"
+                            android:hint="3x daily"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                    </TableRow>
+                    <TableRow>
+                        <EditText
+                            android:id="@+id/etMedication3"
+                            android:inputType="text"
+                            android:hint="Medicine"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etDosage3"
+                            android:inputType="text"
+                            android:hint="Dosage"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etFrequency3"
+                            android:inputType="text"
+                            android:hint="3x daily"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                    </TableRow>
+                    <TableRow>
+                        <EditText
+                            android:id="@+id/etMedication4"
+                            android:inputType="text"
+                            android:hint="Medicine"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etDosage4"
+                            android:inputType="text"
+                            android:hint="Dosage"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etFrequency4"
+                            android:inputType="text"
+                            android:hint="3x daily"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                    </TableRow>
+                    <TableRow>
+                        <EditText
+                            android:id="@+id/etMedication5"
+                            android:inputType="text"
+                            android:hint="Medicine"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etDosage5"
+                            android:inputType="text"
+                            android:hint="Dosage"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etFrequency5"
+                            android:inputType="text"
+                            android:hint="3x daily"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                    </TableRow>
+                    <TableRow>
+                        <EditText
+                            android:id="@+id/etMedication6"
+                            android:inputType="text"
+                            android:hint="Medicine"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etDosage6"
+                            android:inputType="text"
+                            android:hint="Dosage"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etFrequency6"
+                            android:inputType="text"
+                            android:hint="3x daily"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                    </TableRow>
+                    <TableRow>
+                        <EditText
+                            android:id="@+id/etMedication7"
+                            android:inputType="text"
+                            android:hint="Amoxicillin"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etDosage7"
+                            android:inputType="text"
+                            android:hint="Dosage"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etFrequency7"
+                            android:inputType="text"
+                            android:hint="3x daily"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                    </TableRow>
+
+                    <!-- Repeat the same pattern for remaining rows (Medication2-9) -->
+                    <TableRow>
+                        <EditText
+                            android:id="@+id/etMedication8"
+                            android:inputType="text"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etDosage8"
+                            android:inputType="text"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                        <EditText
+                            android:id="@+id/etFrequency8"
+                            android:inputType="text"
+                            android:padding="4dp"
+                            android:textColor="@android:color/black"
+                            android:backgroundTint="@android:color/transparent"/>
+                    </TableRow>
+
+
+                    <!-- (Omitted rows 3-9 for brevity, but they would follow the same pattern) -->
+                </TableLayout>
+
+                <!-- Additional Notes -->
+                <TextView
+                    android:id="@+id/tvAdditionalNotesHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Notes"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etAdditionalNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Take medications with food. Avoid alcohol while on antibiotics."
+                    android:background="#F9F9F9"
+                    android:padding="12dp"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="@android:color/transparent"/>
+
+
+
+            </LinearLayout>
+            <!-- Download Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDownloadPrescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Download Prescription as image"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@android:drawable/ic_menu_save"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+    <!-- Floating View -->
+    <TextView
+        android:id="@+id/floatingHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:padding="8dp"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:elevation="8dp"/>
+</RelativeLayout>
